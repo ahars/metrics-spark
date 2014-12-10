@@ -14,11 +14,7 @@ public class MetricsToConsole {
 
         JavaStreamingContext ssc = new JavaStreamingContext(conf, new Duration(5000));
 
-        ssc.receiverStream(new MetricsReceiver("localhost", 9999))
-            .foreachRDD(rdd -> {
-                rdd.foreach(measure -> System.out.println(measure.toString()));
-                return null;
-            });
+        ssc.receiverStream(new MetricsReceiver("localhost", 9999)).print();
 
         ssc.start();
         ssc.awaitTermination();
