@@ -14,7 +14,7 @@ public class MetricsToConsole {
 
         JavaStreamingContext ssc = new JavaStreamingContext(conf, new Duration(5000));
 
-        ssc.receiverStream(new MetricsReceiver("localhost", 9999)).print();
+        ssc.receiverStream(new MetricsReceiver(9999)).print();
 
         ssc.start();
         ssc.awaitTermination();
