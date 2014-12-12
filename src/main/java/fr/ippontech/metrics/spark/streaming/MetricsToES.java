@@ -19,7 +19,7 @@ public class MetricsToES {
         JavaStreamingContext ssc = new JavaStreamingContext(conf, new Duration(5000));
         ObjectMapper mapper = new ObjectMapper();
 
-        ssc.receiverStream(new MetricsReceiver("localhost", 9999))
+        ssc.receiverStream(new MetricsReceiver(9999))
             .map(s -> mapper.writeValueAsString(s))
             .foreachRDD(rdd -> {
                 JavaEsSpark.saveJsonToEs(rdd, "jhipster/metrics");
