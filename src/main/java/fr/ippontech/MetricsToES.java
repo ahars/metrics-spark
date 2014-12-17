@@ -1,6 +1,7 @@
-package fr.ippontech.metrics.spark.streaming;
+package fr.ippontech;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import fr.ippon.MetricsReceiver;
 import org.apache.spark.SparkConf;
 import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
