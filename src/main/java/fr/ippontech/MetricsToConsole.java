@@ -1,6 +1,6 @@
 package fr.ippontech;
 
-import fr.ippon.MetricsReceiver;
+import fr.ippon.spark.metrics.MetricsReceiver;
 import org.apache.spark.SparkConf;
 import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
