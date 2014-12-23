@@ -1,5 +1,5 @@
 package fr.ippontech;
-
+/*
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.ippon.spark.metrics.MetricsReceiver;
 import org.apache.spark.SparkConf;
@@ -31,3 +31,4 @@ public class MetricsToES {
         ssc.awaitTermination();
     }
 }
+*/
